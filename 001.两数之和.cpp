@@ -1,11 +1,12 @@
 /*
-Origin Link: https://leetcode-cn.com/problems/two-sum/
+* Origin Link: https://leetcode-cn.com/problems/two-sum/
 */
 
 #include<vector>
 #include<iostream>
 #include<unordered_map>
 using namespace std;
+
 vector<int> getTargetCombine(vector<int> & nums , int target)
 {
     // Key : nums value   Value : nums index
@@ -25,13 +26,13 @@ vector<int> getTargetCombine(vector<int> & nums , int target)
 int main()
 {
     vector<int> vec ;
-    int target;
-    int len;
+    int target;             // target output of two sum.
+    int len;                // input lens of vector
     cin >> len;
     int tmp;
     while(len--)
     {
-        cin>>tmp;
+        cin>>tmp;           // Adding the value into vector
         vec.push_back(tmp);
     }
     cin >> target;
