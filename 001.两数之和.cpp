@@ -5,6 +5,7 @@
 * unordered_map -> find() , iterator (Using auto will better than iterator) , pointer to second
 * vector        -> push_back() , Output can be substitude as { }
 * hash content  -> By unordered_map , key is the input arrays's values , value is the input arrays's indexs
+* time complexity : O(n)     space complexity : O(n)  
 * ------------------------------------------------------
 */
 
