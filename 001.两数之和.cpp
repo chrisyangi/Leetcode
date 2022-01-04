@@ -1,5 +1,11 @@
 /*
+* ------------------------------------------------------
 * Origin Link: https://leetcode-cn.com/problems/two-sum/
+* About this solution , You will learn: 
+* unordered_map -> find() , iterator (Using auto will better than iterator) , pointer to second
+* vector        -> push_back() , Output can be substitude as { }
+* hash content  -> By unordered_map , key is the input arrays's values , value is the input arrays's indexs
+* ------------------------------------------------------
 */
 
 #include<vector>
@@ -13,9 +19,12 @@ vector<int> getTargetCombine(vector<int> & nums , int target)
     unordered_map<int, int> hashTable;
     for(int i = 0 ; i < nums.size() ; ++i)
     {
+        // Find the another part of "two sum"
         unordered_map<int, int>::iterator another_side = hashTable.find(target - nums[i]);
+        // another_side will pointer to last element in unordered_map if it is not been found.
         if (another_side != hashTable.end())
         {
+            // another_side->second will less than i because we set the value of i as key in hashTable at first.
             return {another_side->second , i};
         }
         hashTable[nums[i]] = i;
