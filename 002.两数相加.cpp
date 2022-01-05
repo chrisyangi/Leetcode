@@ -18,7 +18,7 @@ The head node of l1 or l2 is the most small base of num just like '2' and '5' .
 So we need to compute the sum of them and discuss if the carry is exist.
 sum = val1 + val2 + carry ;
 carry = sum / 10;
- 
+Origin bit = sum % 10;
 */
 class Solution {
 public:
